@@ -1,3 +1,4 @@
+
 Rapport de Projet : Application Web de gestion de tâches (ToDo List)
 
 1. Présentation Générale
@@ -169,7 +170,6 @@ Des améliorations futures peuvent inclure :
 * Interface plus moderne avec CSS/JS.
 * Tests automatisés avec PHPUnit.
 * Hébergement sur un serveur distant (ex : VPS ou plateforme cloud).
-
 
 
 
