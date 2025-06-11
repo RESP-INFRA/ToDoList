@@ -1,8 +1,8 @@
-#Rapport de Projet : Application Web de gestion de tâches (ToDo List)
+Rapport de Projet : Application Web de gestion de tâches (ToDo List)
 
-# 1. Présentation Générale
+1. Présentation Générale
 
-# Objectif du Projet
+Objectif du Projet
 
 Le projet consiste à concevoir, développer et déployer une application web permettant de gérer des tâches quotidiennes (ToDo List). Cette application permet aux utilisateurs d’effectuer les opérations suivantes :
 
@@ -13,7 +13,7 @@ Le projet consiste à concevoir, développer et déployer une application web pe
 
 Ce projet vise également à intégrer des outils modernes de développement et de déploiement tels que Docker et Git, tout en favorisant la collaboration entre les membres de l'équipe.
 
-# 2. Technologies Utilisées
+2. Technologies Utilisées
 
 | Composant        | Technologie      | Description                                                  |
 | ---------------- | ---------------- | ------------------------------------------------------------ |
@@ -23,13 +23,13 @@ Ce projet vise également à intégrer des outils modernes de développement et 
 | Conteneurisation | Docker + Compose | Déploiement local isolé et reproductible                     |
 | Gestion de code  | Git              | Suivi de version et gestion de branches                      |
 
-# 3. Organisation du Projet
+3. Organisation du Projet
 
-# Arborescence
+Arborescence
 
 
 todo-app/
-├── app/                    # Code source PHP
+├── app/                    
 │   ├── index.php
 │   ├── add.php
 │   ├── insert.php
@@ -39,12 +39,12 @@ todo-app/
 │   ├── update.php
 │   └── db.php
 │
-├── infrastructure/         # Configuration Docker
+├── infrastructure/         
 │   ├── Dockerfile
 │   ├── docker-compose.yml
 │   └── .env
 │
-└── README.md               # Documentation du projet
+└── README.md               
 
 
 Description des Composants
