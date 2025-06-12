@@ -1,3 +1,4 @@
+
 *.log
 .DS_Store
 .env
@@ -24,3 +25,10 @@ Homestead.yaml
 npm-debug.log
 Thumbs.db
 yarn-error.log
+
+".env" 
+"vendor/" 
+"storage/*.log" 
+"storage/framework/cache/*" 
+"storage/framework/sessions/*" 
+

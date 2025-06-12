@@ -1,61 +1,190 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Rapport de Projet : Application Web de gestion de tâches (ToDo List)
 
-## About Laravel
+1. Présentation Générale
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Objectif du Projet
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Le projet consiste à concevoir, développer et déployer une application web permettant de gérer des tâches quotidiennes (ToDo List). Cette application permet aux utilisateurs d’effectuer les opérations suivantes :
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* Ajouter une nouvelle tâche avec un libellé.
+* Consulter l’ensemble des tâches enregistrées.
+* Modifier les détails d’une tâche existante.
+* Supprimer une tâche définitivement.
 
-## Learning Laravel
+Ce projet vise également à intégrer des outils modernes de développement et de déploiement tels que Docker et Git, tout en favorisant la collaboration entre les membres de l'équipe.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2. Technologies Utilisées
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+| Composant        | Technologie      | Description                                                  |
+| ---------------- | ---------------- | ------------------------------------------------------------ |
+| Backend          | PHP 8.1          | Langage principal côté serveur pour le traitement des tâches |
+| Base de données  | MySQL 8.0        | Stockage des tâches                                          |
+| Frontend         | HTML/CSS         | Structure et mise en forme des pages                         |
+| Conteneurisation | Docker + Compose | Déploiement local isolé et reproductible                     |
+| Gestion de code  | Git              | Suivi de version et gestion de branches                      |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. Organisation du Projet
 
-## Laravel Sponsors
+Arborescence
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+todo-app/
+├── app/                    
+│   ├── index.php
+│   ├── add.php
+│   ├── insert.php
+│   ├── list.php
+│   ├── delete.php
+│   ├── edit.php
+│   ├── update.php
+│   └── db.php
+│
+├── infrastructure/         
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   └── .env
+│
+└── README.md               
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
 
-## Contributing
+Description des Composants
+•	app/ : comprend les fichiers nécessaires à la logique applicative en PHP.
+•	infrastructure/ : contient les éléments pour configurer et exécuter les conteneurs Docker.
+•	README.md: fournit les instructions pour l'installation, le lancement et l'utilisation.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. Installation et Lancement (Environnement Local)
 
-## Code of Conduct
+Prérequis
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Avoir Docker et Docker Compose installés.
+Avoir Git pour cloner le dépôt.
 
-## Security Vulnerabilities
+Étapes
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. Clonage du dépôt Git
 
-## License
+git clone https://github.com/RESP-INFRA/todo-app.git
+cd todo-app/infrastructure
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+2. Création du fichier .env
+   Contenu suggéré :
+
+MYSQL_ROOT_PASSWORD=root
+MYSQL_DATABASE=todo
+MYSQL_USER=todo_user
+MYSQL_PASSWORD=secret
+
+
+3. Démarrage des conteneurs
+docker-compose up -d
+
+
+4. Accès à l'application
+   Dans un navigateur : [http://localhost:8080]
+
+5. Fonctionnalités et Tests Fonctionnels
+
+Fonctionnalités Implémentées
+
+•	add.php : formulaire d’ajout d’une tâche.
+•	insert.php : enregistrement de la tâche dans la base.
+•	list.php : affichage des tâches sous forme de tableau.
+•	edit.php / update.php : modification des données d’une tâche.
+•	delete.php : suppression d’une tâche.
+
+Tests Réalisés
+
+•	Ajout avec libellé valide.
+•	Modification d'une tâche avec ID existant.
+•	Suppression de tâche.
+•	Affichage correct d’une liste vide.
+•	Gestion d’erreurs en cas de champs vides ou ID invalide.
+
+6.Améliorations UX/UI (Laravel)
+•	Utilisation de Blade templates (layouts/app.blade.php) pour structurer de façon claire la navigation et l’affichage des vues.
+•	Préparation à l’intégration d’un fichier CSS personnalisé via resources/css/app.css, compilé avec Vite.
+•	Design responsive envisagé, structure HTML compatible Bootstrap/Tailwind, mais non encore validé sur terminaux mobiles.
+•	Intégration des messages d’erreur lisibles avec la directive @error dans les formulaires, affichés sous chaque champ concerné.
+•	Utilisation de composants Blade pour simplifier la réutilisation d'éléments UI (à prévoir ou en cours).
+
+
+7. Gestion de Versions (Git)
+
+Arborescence des Branches
+
+•	main : branche principale, stable, contenant le produit fini.
+•	infrastructure : branche dédiée aux configurations Docker et .env.
+•	develop : branche de développement actif des fonctionnalités PHP.
+
+Stratégie Git Adoptée
+
+•	Création de branches par fonctionnalité ou domaine.
+•	Merges vers `develop`, puis vers `main` une fois les tests validés.
+•	Utilisation de commits clairs : `feat: ajout de formulaire`, `fix: correction suppression`.
+
+8. Collaboration et Répartition des Tâches
+
+Équipe Infrastructure
+
+Fatouma ABDOU DJIBO
+Mohamed SEKOU DIALLO
+
+Responsables de :
+
+* Dockerfile et docker-compose.yml
+* Fichier .env
+* Mise en place des volumes et connexions réseaux
+
+Équipe Développement
+
+Maguirat MAHAMAT
+ Kine TOP
+
+Responsables de :
+
+•	Création des fichiers PHP
+•	Connexion à la base MySQL
+•	Implémentation de la logique CRUD
+•	Vérification des entrées utilisateur
+
+9. Présentation Finale
+
+•	Démonstration en local de l’application via navigateur.
+•	Parcours complet d’ajout, modification, suppression.
+•	Explication technique du Dockerfile, docker-compose et structure PHP.
+•	Présentation du suivi Git (captures d’écran de commits, logs Git).
+•	Ajout de captures d’écran de l’interface utilisateur.
+
+10. Conclusion
+
+Ce projet a permis de :
+
+•	Mettre en pratique les compétences en développement web PHP/MySQL.
+•	Utiliser un environnement Dockerisé pour isoler le projet.
+•	Structurer le travail d'équipe via Git avec des branches thématiques.
+•	Préparer une documentation claire pour la reproduction et la présentation.
+
+Des améliorations futures peuvent inclure :
+
+•	Interface plus moderne avec CSS/JS.
+•	Tests automatisés avec PHPUnit.
+•	Hébergement sur un serveur distant (ex : VPS ou plateforme cloud).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
