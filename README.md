@@ -101,12 +101,13 @@ Tests Réalisés
 •	Affichage correct d’une liste vide.
 •	Gestion d’erreurs en cas de champs vides ou ID invalide.
 
-6. Améliorations UX/UI
+6.Améliorations UX/UI (Laravel)
+•	Utilisation de Blade templates (layouts/app.blade.php) pour structurer de façon claire la navigation et l’affichage des vues.
+•	Préparation à l’intégration d’un fichier CSS personnalisé via resources/css/app.css, compilé avec Vite.
+•	Design responsive envisagé, structure HTML compatible Bootstrap/Tailwind, mais non encore validé sur terminaux mobiles.
+•	Intégration des messages d’erreur lisibles avec la directive @error dans les formulaires, affichés sous chaque champ concerné.
+•	Utilisation de composants Blade pour simplifier la réutilisation d'éléments UI (à prévoir ou en cours).
 
-•	Ajout de structure HTML claire pour une navigation fluide.
-•	Préparation à l’ajout d’une feuille de style CSS.
-•	Responsive design à prévoir (non encore testé sur mobile).
-•	Messages d’erreur affichés de manière lisible.
 
 7. Gestion de Versions (Git)
 
