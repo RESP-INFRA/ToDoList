@@ -103,6 +103,7 @@ Tests Réalisés
 •	Gestion d’erreurs en cas de champs vides ou ID invalide.
 
 6.Améliorations UX/UI (Laravel)
+
 •	Utilisation de Blade templates (layouts/app.blade.php) pour structurer de façon claire la navigation et l’affichage des vues.
 •	Préparation à l’intégration d’un fichier CSS personnalisé via resources/css/app.css, compilé avec Vite.
 •	Design responsive envisagé, structure HTML compatible Bootstrap/Tailwind, mais non encore validé sur terminaux mobiles.
@@ -140,7 +141,7 @@ Responsables de :
 Équipe Développement
 
 Maguirat MAHAMAT
- Kine TOP
+Kine TOP
 
 Responsables de :
 
